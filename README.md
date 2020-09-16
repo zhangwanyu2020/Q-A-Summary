@@ -3,7 +3,19 @@
 
 * * * 代码环境：colab or jupyter * * *
 
-## UniLM模型放在了另一个仓库：https://github.com/zhangwanyu2020/UniLM
+文件说明：
+
+word_to_vectors：采用word2vec方法训练词向量
+
+seq2seq_Attention：第一种方法，词向量来自于word_to_vectors的结果
+
+seq2seq_PGN：采用coverage+PGN机制，对第一种方法的改进，词向量来自于word_to_vectors的结果
+
+Bert_for_summarize：基于bert预训练模型，对对话中的每个句子分类，判断其是否成为摘要
+
+UniLM：基于UniLM预训练模型，将seq2seq language model融入模型
+
+### UniLM模型放在了另一个仓库：https://github.com/zhangwanyu2020/UniLM
 
 一、项目背景
 
@@ -139,7 +151,7 @@ step_6：测试数据
 十、后续2 * * * * * * * *
 
 
-最近痴迷了各种基于bert改造后预训练模型，UniLM在seq2seq问题上的表现不错，实践了一番。
+最近学习了几个不错的预训练模型，UniLM在seq2seq问题上的表现不错，实践了一番。
 
 UniLM简介：在多个无监督语言模型目标（单向LM、双向LM和Sequence-to-Sequence LM）中共享Transformer网络参数。为了实现三个语言模型，self-attention中使用了不同的masks。
 
