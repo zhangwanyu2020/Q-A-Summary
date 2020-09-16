@@ -3,6 +3,8 @@
 
 * * * 代码环境：colab or jupyter * * *
 
+## UniLM模型放在了另一个仓库：https://github.com/zhangwanyu2020/UniLM
+
 一、项目背景
 
 
@@ -131,6 +133,21 @@ step_6：测试数据
 
 心得：用bert做多轮对话的摘要，虽然效果提升了很多，还是有点的缺陷。一是基于分类来做的，缺乏推理的能力；二是对话的文本很随意，在拆分成句子的时候拆的太短太长都不好，很难把控。但是如果在正规的长篇
 文章中，bert表现应该更好。
+
+
+
+十、后续2 * * * * * * * *
+
+
+最近痴迷了各种基于bert改造后预训练模型，UniLM在seq2seq问题上的表现不错，实践了一番。
+
+UniLM简介：在多个无监督语言模型目标（单向LM、双向LM和Sequence-to-Sequence LM）中共享Transformer网络参数。为了实现三个语言模型，self-attention中使用了不同的masks。
+
+操作：采用快速实现工具--bert4keras 1.8.4,详情见代码：https://github.com/zhangwanyu2020/UniLM
+
+成果：rouge_L 提升近4分，总分突破40分
+
+
 
 
 
