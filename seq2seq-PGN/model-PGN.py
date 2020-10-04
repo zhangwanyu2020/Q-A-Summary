@@ -20,8 +20,8 @@ class PGN(tf.keras.Model):
                                self.embedding_matrix
                                )
         self.pointer = Pointer()
-        # 第一步encoder得到一个序列的enc_output,和最后单元的enc_hidden
-
+        
+    # 第一步encoder得到一个序列的enc_output,和最后单元的enc_hidden
     def call_encoder(self, enc_inp):
         enc_hidden = self.encoder.initialize_hidden_state()
         enc_output, enc_hidden = self.encoder(enc_inp, enc_hidden)
